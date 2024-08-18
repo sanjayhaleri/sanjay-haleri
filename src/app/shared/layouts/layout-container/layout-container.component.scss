@@ -1,0 +1,93 @@
+@import "../../scss/colors";
+
+.app-outer-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    .app-container {
+        display: block;
+        max-width: 1920px;
+        width: 90%;
+        height: 90%;
+        border: 0.1rem solid $borderColor;
+        border-radius: 0.5rem;
+        background-color: $bgColor;
+
+        .top-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            .window-options {
+                button {
+                    width: 1rem;
+                    height: 1rem;
+                    border-radius: 50%;
+                    margin-right: 0.5rem;
+
+                    &:nth-child(1) {
+                        background-color: $colorRed;
+                    }
+                    &:nth-child(2) {
+                        background-color: $colorYellow;
+                    }
+                    &:nth-child(3) {
+                        background-color: $colorGreen;
+                    }
+                }
+            }
+
+            .middle_section {
+                display: flex;
+                align-items: center;
+                max-width: 450px;
+
+                .navigate-option {
+                    margin-right: 1.5rem;
+                   button {
+                    color: $iconDisabled;
+                    display: inline-flex;
+                    align-items: center;
+
+                     &.active {
+                        color: $iconActive;
+                     }
+                     &:last-child {
+                        transform: rotateY(180deg);
+                     }
+                   }
+                }
+                .search-option {
+                    flex-grow: 1;
+                    position: relative;
+                    input {
+                        width: 100%;
+                        border: 0.1rem solid $borderColor;
+                        height: 2.7rem;
+                        border-radius: 0.5rem;
+                        background-color: $hoverColor;
+                        outline: none;
+                    }
+                    input + div {
+                        color: $textColorSecondary;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1.3rem;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        span {
+                            color: $iconActive;
+                            margin-right: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,7 +1,10 @@
+@import 'material-icons/iconfont/material-icons.scss';
+@import './app/shared/scss/colors';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'material-icons/iconfont/material-icons.scss';
+
 
 
 @font-face {
@@ -24,4 +27,6 @@ body {
 body {
     width: 100vw;
     height: 100vh;
+    background-color: $bgColor;
+    color: $textColorPrimary;
 }
